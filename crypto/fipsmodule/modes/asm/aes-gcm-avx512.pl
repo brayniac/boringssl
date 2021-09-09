@@ -4456,7 +4456,7 @@ sub GHASH_ENCRYPT_Nx16_PARALLEL {
 # ;;; Functions definitions
 # ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-$code .= ".section .text\n";
+$code .= ".text\n";
 
 # ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 # ;void gcm_init_avx512(u128 Htable[16],
@@ -4929,7 +4929,7 @@ ___
 }
 
 $code .= <<___;
-.section .data
+.data
 .align 16
 POLY:   .quad     0x0000000000000001, 0xC200000000000000
 
